@@ -1,0 +1,8 @@
+[Unit]
+Description=i3 Battery Warning Service
+
+[Service]
+Type=oneshot
+Environment=DISPLAY=:0.0
+Environment=XAUTHORITY=/home/user/.Xauthority
+ExecStart=/bin/bash /usr/local/bin/i3batwarn.sh
