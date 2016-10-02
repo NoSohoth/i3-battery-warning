@@ -28,7 +28,7 @@ LIMIT="20"
 # if battery is discharging
 #
 if [ $PERCENT -le "$(echo $LIMIT)" ] && [ "$STAT" == "Discharging" ]; then
-    MESSAGE="Battery charge is $PERCENT%, which is under the $LIMIT% limit level."
-    DISPLAY=:0.0 /usr/bin/i3-nagbar -m "$(echo $MESSAGE)"
+    MESSAGE="Battery is low. $PERCENT% remaining."
+    /usr/bin/i3-nagbar -m "$(echo $MESSAGE)"
 fi
 
